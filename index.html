@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymEdge</title>
+  <link rel="shortcut icon" href="./media/img.png" type="image/x-icon">
+  <!-- Tailwind -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- google font -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"
+    integrity="sha512-v/wOVTkoU7mXEJC3hXnw9AA6v32qzpknvuUF6J2Lbkasxaxn2nYcl+HGB7fr/kChGfCqubVr1n2sq1UFu3Gh1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- Fontawesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    * {
+      font-family: "Montserrat", sans-serif;
+
+    }
+
+    .img:hover {
+      color: rgba(255, 166, 0, 0.527);
+
+    }
+
+    .schedule {
+      max-width: 1800px;
+      margin: auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      background-image: url('https://images.pexels.com/photos/16966364/pexels-photo-16966364/free-photo-of-men-in-competition-at-gym-in-black-and-white.jpeg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: rgba(0, 0, 0, 0.692);
+
+    }
+
+    .tabs {
+      display: flex;
+      padding-top: 10px;
+      padding-left: 10px;
+      margin: 30px;
+      z-index: 10;
+      background: #ff6600;
+
+
+    }
+
+    .day {
+      margin-left: 20px;
+      margin-top: 30px;
+      font-size: 25px;
+      padding: 5px;
+      border: 2px solid rgb(255, 255, 255);
+      border-radius: 30px;
+
+    }
+
+
+
+    .tabs label {
+      flex: 1;
+
+      padding: 15px;
+      text-align: center;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+      transition: background 0.3s;
+
+    }
+
+    .tabs label:hover {
+      background: #e65c00;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .content {
+      padding: 40px;
+      font-size: 20px;
+    }
+
+    .tab-content {
+      display: none;
+      animation: fade 0.4s ease-in-out;
+    }
+
+    input:checked+label {
+      background: #cc5200;
+    }
+
+    #day1:checked~.content .day1,
+    #day2:checked~.content .day2,
+    #day3:checked~.content .day3,
+    #day4:checked~.content .day4,
+    #day5:checked~.content .day5,
+    #day6:checked~.content .day6 {
+      display: block;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background: #ff6600;
+      color: white;
+    }
+  </style>
+
+</head>
+
+<body class="">
+
+  <!-- Top Info Bar -->
+  <div
+    class="bg-black/78 text-md px-4 py-2 flex flex-col md:flex-row justify-around items-center text-white  backdrop-blur-sm fixed top-0 left-0 w-full z-50 text-white ">
+    <div class="flex gap-4 items-center mb-1 md:mb-0">
+      <span><i class="fas fa-phone text-orange-500 mr-1"></i><a href=""> 54656897897</a></span> |
+      <span><i class="fas fa-envelope text-orange-500 mr-1"></i> <a href="">info@radiustheme.com</a></span>
+    </div>
+    <div class="flex items-center gap-4">
+      <span><a href="./account.html">My Account</a></span>
+      |
+      <div class="flex gap-3 text-primary">
+        <a href=""><i class="fab fa-facebook-f hover:text-orange-500"></i></a>
+        <a href=""><i class="fab fa-twitter hover:text-orange-500"></i></a>
+        <a href=""> <i class="fab fa-youtube hover:text-orange-500"></i></a>
+        <a href=""> <i class="fab fa-linkedin hover:text-orange-500"></i></a>
+      </div>
+    </div>
+
+
+  </div>
+  <!-- Navigation -->
+  <header class="bg-black/78 backdrop-blur-sm fixed top-0 left-0 w-full z-50 text-white mt-10">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-4">
+
+      <!-- Logo -->
+      <div class="font-bold leading-tight">
+        <span class="text-primary text-4xl"><span class="text-orange-600 text-4xl">G</span>YM</span><span
+          class="text-4xl"> EDGE</span><br />
+        <span class="text-md text-gray-400 ml-8">FITNESS CENTER</span>
+      </div>
+      <!-- Hamburger Menu Button -->
+      <input type="checkbox" id="menu-toggle" class="hidden peer" />
+      <label for="menu-toggle" class="block md:hidden cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </label>
+      <!-- Nav Links -->
+      <nav class="w-full md:w-auto mt-4 md:mt-0 hidden peer-checked:block md:block">
+        <ul class="flex flex-col md:flex-row gap-4 md:gap-10 font-medium text-md items-center">
+          <li class="hover:text-orange-500"><a href="#">HOME</a></li>
+          <li class="hover:text-orange-500"><a href="./about.html">ABOUT</a></li>
+          <li class="hover:text-orange-500"><a href="./classes.html">CLASSES</a></li>
+          <li class="hover:text-orange-500"><a href="./trainer.html">TRAINERS</a></li>
+          <li class="hover:text-orange-500"><a href="./schedule.html">SCHEDULE</a></li>
+          <li class="hover:text-orange-500"><a href="./blog.html">BLOG</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+
+
+  <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center text-white mt-0"
+    style="background-image: url('https://media.istockphoto.com/id/2027278927/photo/young-athletic-woman-exercising-with-barbell-during-sports-training-in-a-gym.jpg?s=612x612&w=0&k=20&c=ifFL7Mqc8NwTj25PAx4ONy1OOQZvc1S_kVOofsbLgFw=');">
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black opacity-70"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 px-4">
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+        BUILD <span class="text-orange-500">YOUR</span> BODY <span class="text-orange-500">STRONG</span>
+      </h1>
+      <p class="mt-4 text-lg md:text-xl">Ready to change your physique, but can’t work out in the gym?</p>
+      <button class="mt-6 px-6 py-3 border-2 border-orange-500 text-white hover:bg-orange-500 transition rounded-full">
+        <a href="./account.html"> Join with us</a>
+      </button>
+    </div>
+
+
+  </section>
+
+  <!--  -->
+  <section class=" px-4">
+    <!-- Top Features Row -->
+    <div class="max-w-9xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-16">
+      <div class="bg-white text-center p-6 shadow hover:shadow-lg transition">
+        <div class="text-3xl mb-3 flex justify-center item-center"><img width="100px" src="./media/yoga.png" alt="">
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800 uppercase mb-2">Yoga</h3>
+        <p class="text-md text-gray-900 ">Discover balance, flexibility, and inner peace with our guided yoga sessions.
+          From beginner-friendly stretches to advanced poses, our classes help you improve posture, reduce stress, and
+          enhance overall well-being.</p>
+      </div>
+      <div class="bg-gray-100 text-center p-6 shadow hover:shadow-lg transition">
+        <div class="text-3xl mb-3 flex justify-center item-center"><img width="100px" src="./media/weight-lifting.png"
+            alt=""></div>
+        <h3 class="text-2xl font-bold text-gray-800 uppercase mb-2">Weight Lifting</h3>
+        <p class="text-md text-gray-900">Build strength and confidence through safe, effective weight lifting programs.
+          Our trainers guide you on proper form, progressive overload, and muscle-building techniques tailored to your
+          goals.</p>
+      </div>
+      <div class="bg-white text-center p-6 shadow hover:shadow-lg transition">
+        <div class="text-3xl mb-3 flex justify-center item-center"><img width="100px" src="./media/training.png" alt="">
+        </div>
+        <h3 class=" text-2xl font-bold text-gray-800 uppercase mb-2">Running</h3>
+        <p class="text-md text-gray-900">Whether you’re aiming for your first 5K or boosting your endurance, our running
+          programs improve stamina, speed, and cardiovascular health — all while making your runs more enjoyable.</p>
+      </div>
+      <div class="bg-gray-100 text-center p-6 shadow hover:shadow-lg transition">
+        <div class="text-3xl mb-3 flex justify-center item-center"><img class="items-center" width="100px"
+            src="./media/medicine.png" alt=""></div>
+        <h3 class="text-2xl font-bold text-gray-800 uppercase mb-2">Medication</h3>
+        <p class="text-md text-gray-900">Calm your mind and recharge your energy with guided meditation. Learn breathing
+          techniques and mindfulness practices that help reduce anxiety, improve focus, and promote a deeper sense of
+          relaxation.</p>
+      </div>
+    </div>
+
+    <!-- Bottom Split Section -->
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+      <!-- Text Side -->
+      <div class="lg:w-1/2 text-center lg:text-left">
+        <h2 class="text-4xl text-gray-500 font-bold mb-4">
+          All About <br><span class="text-orange-500 text-6xl">GYM <span class="text-black">FITNESS</span></span>
+        </h2>
+        <p class="text-gray-700 mb-6">
+          Achieve your fitness goals with our state-of-the-art gym facilities. From cardio machines to free weights, we
+          provide the perfect environment for strength, endurance, and total body transformation.
+        </p>
+        <button class="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition">
+          <a href="./account.html">SIGN UP</a>
+        </button>
+      </div>
+      <!-- Image Side -->
+      <div class="lg:w-1/2">
+        <img src="https://radiustheme.com/demo/wordpress/gymedge/wp-content/uploads/2016/10/being-builder.png"
+          alt="Gym Man" class="mx-auto" width="900px" height="900px">
+      </div>
+    </div>
+  </section>
+
+  <!--  -->
+
+
+
+  <section class="bg-gray-100">
+    <!-- Top Row: Feature Boxes -->
+    <div class="text-center ">
+      <h1 class="text-4xl font-bold py-10">FEATURED CLASSES</h1>
+      <div class="flex justify-center item-center">
+        <div class="w-24 h-2 bg-orange-500 "></div>
+      </div>
+      <P class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quibusdam deleniti et quis
+        facilis quisquam <br>cumque maxime quos earum facere minima dolores cupiditate commodi <br>ullam dolorem modi
+        dolorum, officia incidunt.</P>
+    </div>
+    <div class="max-w-9xl  mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Yoga -->
+      <div class="bg-white text-center shadow mb-2 ">
+        <img src="https://radiustheme.com/demo/wordpress/gymedge/wp-content/uploads/2016/12/class_01-410x200.jpg"
+          alt="Yoga Icon" class="mx-auto mb-4 ">
+        <h3 class="font-bold text-lg mb-2">YOGA</h3>
+        <p class="text-gray-600 text-sm">
+          Yoga is a meditative means of discovering dysfunctional perception and cognition,
+          as well as overcoming it for release from suffering, inner peace and salvation.
+        </p>
+      </div>
+      <!-- Weight Lifting -->
+      <div class="bg-white text-center shadow mb-2">
+        <img src="https://radiustheme.com/demo/wordpress/gymedge/wp-content/uploads/2016/12/class_04-410x200.jpg"
+          alt="Weight Lifting Icon" class="mx-auto mb-4">
+        <h3 class="font-bold text-lg mb-2">WEIGHT LIFTING</h3>
+        <p class="text-gray-600 text-sm">
+          Strength training using weights to build muscle mass, improve endurance, and boost metabolism.
+          build muscle mass, improve endurance, and boost metabolism.
+        </p>
+      </div>
+      <!-- Running -->
+      <div class="bg-white text-center shadow mb-2">
+        <img src="https://radiustheme.com/demo/wordpress/gymedge/wp-content/uploads/2016/12/class_05-410x200.jpg"
+          alt="Running Icon" class="mx-auto mb-4">
+        <h3 class="font-bold text-lg mb-2">RUNNING</h3>
+        <p class="text-gray-600 text-sm">
+          Cardiovascular training to enhance stamina, burn calories, and improve overall heart health.
+          training to enhance stamina, burn calories, and improve overall heart health.
+        </p>
+      </div>
+      <!-- Medication -->
+      <div class="bg-white text-center shadow mb-2">
+        <img src="https://radiustheme.com/demo/wordpress/gymedge/wp-content/uploads/2016/12/class_03-410x200.jpg"
+          alt="Medication Icon" class="mx-auto mb-4">
+        <h3 class="font-bold text-lg mb-2">MEDICATION</h3>
+        <p class="text-gray-600 text-sm">
+          Guidance on supplements and treatments to support your fitness and wellness journey.
+          supplements and treatments to support your fitness and wellness journey.
+        </p>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!--  -->
+
+  <div class="schedule text-white">
+    <div class="clsshead flex justify-center p-10">
+      <h1 class="text-4xl font-bold">Class Schedule</h1>
+    </div>
+    <!-- Tabs -->
+    <input type="radio" name="tabs" id="day1" checked>
+    <label for="day1" class="day">Monday</label>
+    <input type="radio" name="tabs" id="day2">
+    <label for="day2" class="day">Tuesday</label>
+    <input type="radio" name="tabs" id="day3">
+    <label for="day3" class="day">Wednesday</label>
+    <input type="radio" name="tabs" id="day4">
+    <label for="day4" class="day">Thursday</label>
+    <input type="radio" name="tabs" id="day5">
+    <label for="day5" class="day">Friday</label>
+    <input type="radio" name="tabs" id="day6">
+    <label for="day6" class="day">Saturday</label>
+
+    <!-- Content -->
+    <div class="content">
+      <div class="tab-content day1">
+        <table>
+          <tr>
+            <th>Time</th>
+            <th>Class</th>
+            <th>Trainer</th>
+          </tr>
+          <tr>
+            <td>08:00 AM</td>
+            <td>Yoga</td>
+            <td>Anna Smith</td>
+          </tr>
+          <tr>
+            <td>10:00 AM</td>
+            <td>Pilates</td>
+            <td>John Doe</td>
+          </tr>
+        </table>
+      </div>
+      <div class="tab-content day2">
+        <table>
+          <tr>
+            <th>Time</th>
+            <th>Class</th>
+            <th>Trainer</th>
+          </tr>
+          <tr>
+            <td>09:00 AM</td>
+            <td>Zumba</td>
+            <td>Jane Lee</td>
+          </tr>
+          <tr>
+            <td>11:00 AM</td>
+            <td>Spin Class</td>
+            <td>Mike Ross</td>
+          </tr>
+        </table>
+      </div>
+      <div class="tab-content day3">
+        <table>
+          <tr>
+            <th>Time</th>
+            <th>Class</th>
+            <th>Trainer</th>
+          </tr>
+          <tr>
+            <td>07:00 AM</td>
+            <td>CrossFit</td>
+            <td>Sarah Kim</td>
+          </tr>
+          <tr>
+            <td>09:00 AM</td>
+            <td>Strength Training</td>
+            <td>David Lee</td>
+          </tr>
+        </table>
+      </div>
+      <div class="tab-content day4">
+        <table>
+          <tr>
+            <th>Time</th>
+            <th>Class</th>
+            <th>Trainer</th>
+          </tr>
+          <tr>
+            <td>07:00 AM</td>
+            <td>CrossFit</td>
+            <td>Sarah Kim</td>
+          </tr>
+          <tr>
+            <td>09:00 AM</td>
+            <td>Strength Training</td>
+            <td>David Lee</td>
+          </tr>
+        </table>
+      </div>
+      <div class="tab-content day5">
+        <table>
+          <tr>
+            <th>Time</th>
+            <th>Class</th>
+            <th>Trainer</th>
+          </tr>
+          <tr>
+            <td>07:00 AM</td>
+            <td>CrossFit</td>
+            <td>Sarah Kim</td>
+          </tr>
+          <tr>
+            <td>09:00 AM</td>
+            <td>Strength Training</td>
+            <td>David Lee</td>
+          </tr>
+        </table>
+      </div>
+      <div class="tab-content day6">
+        <table>
+          <tr>
+            <th>Time</th>
+            <th>Class</th>
+            <th>Trainer</th>
+          </tr>
+          <tr>
+            <td>07:00 AM</td>
+            <td>CrossFit</td>
+            <td>Sarah Kim</td>
+          </tr>
+          <tr>
+            <td>09:00 AM</td>
+            <td>Strength Training</td>
+            <td>David Lee</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <!-- Testimonals -->
+  <section class="relative">
+    <!-- Optional Overlay -->
+    <div class="absolute inset-0 bg-white bg-opacity-70"></div>
+
+    <!-- Content -->
+    <div class="relative max-w-6xl mx-auto py-16 px-6">
+      <h2 class="text-3xl font-bold mb-8 flex justify-center">What Our Client's Say</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Testimonial Card -->
+        <div class="bg-white bg-opacity-80 p-6 rounded shadow">
+          <div class="flex items-center mb-4">
+            <img src="https://radiustheme.com/demo/wordpress/gymedge/wp-content/uploads/2016/11/client2.jpg"
+              alt="Honey Jisa" class="w-16 h-16 rounded-full mr-4">
+            <div>
+              <h3 class="font-bold">Honey Jisa / CEO</h3>
+              <div class="w-8 h-1 bg-orange-500 mt-1"></div>
+            </div>
+          </div>
+          <p class="text-gray-700 leading-relaxed italic">
+            "This gym completely changed my life. The trainers are amazing and the facilities are top-notch!"
+          </p>
+        </div>
+        <!-- Another Card -->
+        <div class="bg-white bg-opacity-80 p-6 rounded shadow">
+          <div class="flex items-center mb-4">
+            <img src="https://radiustheme.com/demo/wordpress/gymedge/wp-content/uploads/2017/01/client_01.jpg"
+              alt="Tahmid Alom" class="w-16 h-16 rounded-full mr-4">
+            <div>
+              <h3 class="font-bold">Tahmid Alom / CEO</h3>
+              <div class="w-8 h-1 bg-orange-500 mt-1"></div>
+            </div>
+          </div>
+          <p class="text-gray-700 leading-relaxed italic">
+            "A great atmosphere with friendly staff. I actually look forward to my workouts now."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Expert Trainers -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <!-- Section Title -->
+      <h2 class="text-3xl font-bold flex justify-center mb-10">EXPERT TRAINERS</h2>
+
+      <!-- Trainers Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+        <!-- Trainer Card -->
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img src="https://radiustheme.com/demo/wordpress/gymedge/wp-content/uploads/2016/12/trainer_4.jpg"
+            class="w-full h-auto transition-transform duration-500 group-hover:scale-110" alt="Trainer">
+          <!-- Overlay -->
+          <div
+            class="absolute bottom-0 left-0 right-0 bg-orange-500 text-white py-4 text-center transition-all duration-500 translate-y-full group-hover:translate-y-0">
+            <h3 class="text-lg font-bold">Jecy Deoko</h3>
+            <p class="text-sm">Fitness Trainer</p>
+          </div>
+        </div>
+
+        <!-- Trainer Card -->
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img src="https://radiustheme.com/demo/wordpress/gymedge/wp-content/uploads/2016/12/trainer_2.jpg"
+            class="w-full h-auto transition-transform duration-500 group-hover:scale-110" alt="Trainer">
+          <!-- Overlay -->
+          <div
+            class="absolute bottom-0 left-0 right-0 bg-orange-500 text-white py-4 text-center transition-all duration-500 translate-y-full group-hover:translate-y-0">
+            <h3 class="text-lg font-bold">Ellie Watson</h3>
+            <p class="text-sm">Fitness Trainer</p>
+          </div>
+        </div>
+
+        <!-- Trainer Card -->
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img src="https://radiustheme.com/demo/wordpress/gymedge/wp-content/uploads/2016/11/trainer.jpg"
+            class="w-full h-auto transition-transform duration-500 group-hover:scale-110" alt="Trainer">
+          <!-- Overlay -->
+          <div
+            class="absolute bottom-0 left-0 right-0 bg-orange-500 text-white py-4 text-center transition-all duration-500 translate-y-full group-hover:translate-y-0">
+            <h3 class="text-lg font-bold">David Smith</h3>
+            <p class="text-sm">Fitness Trainer</p>
+          </div>
+        </div>
+
+        <!-- Trainer Card -->
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img src="https://radiustheme.com/demo/wordpress/gymedge/wp-content/uploads/2016/12/trainer_1.jpg"
+            class="w-full h-auto transition-transform duration-500 group-hover:scale-110" alt="Trainer">
+          <!-- Overlay -->
+          <div
+            class="absolute bottom-0 left-0 right-0 bg-orange-500 text-white py-4 text-center transition-all duration-500 translate-y-full group-hover:translate-y-0">
+            <h3 class="text-lg font-bold">Selina Stuart</h3>
+            <p class="text-sm">Fitness Trainer</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!--  -->
+  <section class="bg-gray-100 py-12">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Join Our Gym Today!</h2>
+      <p class="text-gray-600 mb-8">
+        Get fit, stay healthy, and achieve your goals with our affordable membership plans.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Plan 1 -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Basic Plan</h3>
+          <p class="text-gray-600 mb-4">Perfect for beginners</p>
+          <p class="text-3xl font-bold text-orange-500 mb-6">₹999<span class="text-lg font-normal">/month</span></p>
+          <ul class="text-gray-600 space-y-2 mb-6">
+            <li> Access to gym floor</li>
+            <li> Free locker</li>
+            <li> Group classes</li>
+          </ul>
+          <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition">Join Now</button>
+        </div>
+
+        <!-- Plan 2 -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 border-2 border-orange-500 hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Premium Plan</h3>
+          <p class="text-gray-600 mb-4">Best for regular gym-goers</p>
+          <p class="text-3xl font-bold text-orange-500 mb-6">₹1,999<span class="text-lg font-normal">/month</span></p>
+          <ul class="text-gray-600 space-y-2 mb-6">
+            <li> Access to gym floor</li>
+            <li> Free locker</li>
+            <li> Group classes</li>
+            <li> Personal trainer (2 sessions)</li>
+          </ul>
+          <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition">Join Now</button>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">VIP Plan</h3>
+          <p class="text-gray-600 mb-4">For serious fitness lovers</p>
+          <p class="text-3xl font-bold text-orange-500 mb-6">₹2,999<span class="text-lg font-normal">/month</span></p>
+          <ul class="text-gray-600 space-y-2 mb-6">
+            <li> All Premium benefits</li>
+            <li> Unlimited personal training</li>
+            <li> Free diet consultation</li>
+            <li> Sauna & spa access</li>
+          </ul>
+          <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition">Join Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  -->
+  <footer class="bg-gray-900 text-white mt-20 py-12">
+    <div class="container mx-auto px-6 grid md:grid-cols-4 gap-10 ">
+      <div>
+        <h3 class="font-bold text-2xl mb-2">About Company</h3>
+        <p class="text-gray-400 text-lg">Achieve your fitness goals with our state-of-the-art gym facilities. From
+          cardio machines to free weights, we provide the perfect environment for strength, endurance, and total body
+          transformation.</p>
+        <div class="flex space-x-2 mt-4">
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+        </div>
+      </div>
+      <div class="ml-10">
+        <h3 class="font-bold mb-2 text-2xl">Follow Us on Twitter</h3>
+        <p class="text-orange-500 text-lg ">Tweets by @GymEdge</p>
+      </div>
+      <div>
+        <!-- <h3 class="font-bold mb-2 text-2xl">Flickr Photos</h3> -->
+        <div class="grid grid-cols-3 gap-2 ml-5">
+          <!-- <img src="https://live.staticflickr.com/65535/49971120798_969fd05cb8_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971636826_902d3d19b5_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971121318_284e730dea_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971636906_9c1bc91e4a_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971121403_1cb43aa23b_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971899867_945a724c1e_t.jpg" alt="photo"> -->
+          <a href="./index.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Home</a>
+          <a href="./about.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">About</a>
+          <a href="./classes.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Classes</a>
+          <a href="./trainer.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Trainers</a>
+          <a href="./schedule.html"
+            class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Schedule</a>
+
+          <a href="./blog.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Blog</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-gray-400 text-lg">44 New Design Street, rne 005</p>
+        <p class="text-gray-400 text-lg"><i class="fa-solid fa-phone-flip text-orange-500"></i> 01800433633</p>
+        <p class="text-gray-400 text-lg"><i class="fa-solid fa-envelope text-orange-500"></i> info@gymedge.com</p>
+        <p class="text-gray-400 text-lg "><i class="fa-regular fa-mobile text-orange-500"></i> (123) 118 9999</p>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <!-- Copyright  -->
+  <div class="p-6 bg-black">
+    <div class=" text-white flex justify-center">
+      <p>
+        © Copyright GymEdge 2016. All Right Reserved.
+        Designed and Developed by
+        <span class="text-orange-500">GymEdge</span>
+      </p>
+
+    </div>
+    <div>
+      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        class="fixed bottom-4 right-4 p-2 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white rounded-sm transition-colors duration-300 ">
+        <!-- Up Arrow Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+      </button>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account - GymEdge</title>
+  <link rel="shortcut icon" href="./media/img.png" type="image/x-icon">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white backdrop-blur-sm fixed top-0 left-0 w-full z-50 text-black ">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-4">
+
+      <!-- Logo -->
+      <div class="font-bold leading-tight">
+        <span class="text-primary text-4xl"><span class="text-orange-600 text-4xl">G</span>YM</span><span
+          class="text-4xl"> EDGE</span><br />
+        <span class="text-md text-gray-400 ml-8">FITNESS CENTER</span>
+      </div>
+
+      <!-- Nav Links -->
+      <nav class="w-full md:w-auto mt-4 md:mt-0">
+        <ul class="flex flex-col md:flex-row gap-4 md:gap-10 font-medium text-md items-center mr-50">
+          <li class="hover:text-orange-500"><a href="./index.html">HOME</a></li>
+          <li class="hover:text-orange-500"><a href="./about.html">ABOUT</a></li>
+          <li class="hover:text-orange-500"><a href="./classes.html">CLASSES</a></li>
+          <li class="hover:text-orange-500"><a href="./trainer.html">TRAINERS</a></li>
+          <li class="hover:text-orange-500"><a href="./schedule.html">SCHEDULE</a></li>
+          <li class="hover:text-orange-500"><a href="./blog.html">BLOG</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center h-96 flex items-center justify-center"
+    style="background-image: url('https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');">
+    <h1 class="text-white text-6xl font-bold z-10">My Account</h1>
+    <div class="absolute bottom-[-1rem] left-1/2 transform -translate-x-1/2 z-20">
+      <div class="bg-orange-500 text-white text-sm px-5 py-3 rounded-full shadow inline-flex space-x-2">
+        <a href="./index.html" class="hover:underline hover:text-black">Home</a>
+        <span>|</span>
+        <span>My Account</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Login Form -->
+  <section class="mt-16 px-4 md:px-0 ">
+    <div class="max-w-xl mx-auto bg-white p-6 w-100% border border-gray-300 rounded">
+      <h2 class="text-xl font-semibold mb-4">Login</h2>
+      <form class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium mb-1">Username or email address <span
+              class="text-red-500">*</span></label>
+          <input type="text" class="w-full border border-gray-400 px-4 py-2 rounded">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Password <span class="text-red-500">*</span></label>
+          <div class="relative">
+            <input type="password" class="w-full border border-gray-400 px-4 py-2 rounded">
+            <span class="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500">
+              👁️
+            </span>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <input type="checkbox" id="remember" class="mr-2">
+          <label for="remember" class="text-sm">Remember me</label>
+        </div>
+        <button type="submit" class="bg-orange-500 text-white px-6 py-2 rounded text-sm">Log in</button>
+        <div>
+          <a href="#" class="text-sm text-orange-500 hover:underline">Lost your password?</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white mt-20 py-12">
+    <div class="container mx-auto px-6 grid md:grid-cols-4 gap-10 ">
+      <div>
+        <h3 class="font-bold text-2xl mb-2">About Company</h3>
+        <p class="text-gray-400 text-lg">Achieve your fitness goals with our state-of-the-art gym facilities. From
+          cardio machines to free weights, we provide the perfect environment for strength, endurance, and total body
+          transformation.</p>
+        <div class="flex space-x-2 mt-4">
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+        </div>
+      </div>
+      <div class="ml-20">
+        <h3 class="font-bold mb-2 text-2xl">Follow Us on Twitter</h3>
+        <p class="text-orange-500 text-lg ">Tweets by @GymEdge</p>
+      </div>
+      <div>
+        <!-- <h3 class="font-bold mb-2 text-2xl">Flickr Photos</h3> -->
+        <div class="grid grid-cols-3 gap-2 ml-10">
+          <!-- <img src="https://live.staticflickr.com/65535/49971120798_969fd05cb8_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971636826_902d3d19b5_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971121318_284e730dea_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971636906_9c1bc91e4a_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971121403_1cb43aa23b_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971899867_945a724c1e_t.jpg" alt="photo"> -->
+          <a href="./index.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Home</a>
+          <a href="./about.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">About</a>
+          <a href="./classes.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Classes</a>
+          <a href="./trainer.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Trainers</a>
+          <a href="./schedule.html"
+            class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Schedule</a>
+
+          <a href="./blog.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Blog</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-gray-400 text-lg">44 New Design Street, rne 005</p>
+        <p class="text-gray-400 text-lg"><i class="fa-solid fa-phone-flip text-orange-500"></i> 01800433633</p>
+        <p class="text-gray-400 text-lg"><i class="fa-solid fa-envelope text-orange-500"></i> info@gymedge.com</p>
+        <p class="text-gray-400 text-lg "><i class="fa-regular fa-mobile text-orange-500"></i> (123) 118 9999</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Copyright  -->
+  <div class="p-6 bg-black">
+    <div class=" text-white flex justify-center">
+      <p>
+        © Copyright GymEdge 2016. All Right Reserved.
+        Designed and Developed by
+        <span class="text-orange-500">GymEdge</span>
+      </p>
+
+    </div>
+    <div>
+      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        class="fixed bottom-4 right-4 p-2 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white rounded-sm transition-colors duration-300">
+        <!-- Up Arrow Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+      </button>
+    </div>
+</body>
+
+</html>

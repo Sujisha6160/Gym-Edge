@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>classes</title>
+  <link rel="shortcut icon" href="./media/img.png" type="image/x-icon">
+
+  <!-- tailwind -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+
+      font-family: "Montserrat", sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="bg-white backdrop-blur-sm fixed top-0 left-0 w-full z-50 text-white ">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-4">
+
+      <!-- Logo -->
+      <div class="font-bold leading-tight">
+        <span class="text-black text-4xl"><span class="text-orange-600 text-4xl">G</span>YM</span><span
+          class="text-4xl text-black"> EDGE</span><br />
+        <span class="text-md text-gray-400 ml-8">FITNESS CENTER</span>
+      </div>
+
+      <!-- Nav Links -->
+      <nav class="w-full md:w-auto mt-4 md:mt-0">
+        <ul class="flex flex-col md:flex-row gap-4 md:gap-10 font-medium text-md items-center mr-50">
+          <li class="hover:text-orange-500 text-black"><a href="./index.html">HOME</a></li>
+          <li class="hover:text-orange-500 text-black"><a href="./about.html">ABOUT</a></li>
+          <li class="hover:text-orange-500 text-black"><a href="./classes.html">CLASSES</a></li>
+          <li class="hover:text-orange-500 text-black"><a href="./trainer.html">TRAINERS</a></li>
+          <li class="hover:text-orange-500 text-black"><a href="./schedule.html">SCHEDULE</a></li>
+          <li class="hover:text-orange-500 text-black"><a href="./blog.html">BLOG</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- hero section -->
+  <section class="relative h-100 flex items-center justify-center bg-black text-white">
+    <img src="https://img.goodfon.com/original/1920x1168/7/26/shtanga-trenazhernyy-zal-gym.jpg" alt=""
+      class="absolute inset-0 w-full h-full object-cover opacity-40">
+    <h1 class="relative text-5xl font-bold">Daily Workouts</h1>
+  </section>
+  <!-- button -->
+  <div class="flex justify-center ">
+    <div class="-translate-y-1/2 bg-orange-500 text-white py-4 px-7 rounded-full text-sm font-medium shadow-lg">
+      <a href="./classes.html"><span class="hover:text-black">Other Classes</span></a>
+    </div>
+  </div>
+
+  <!-- main -->
+  <div class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <!-- Left Column -->
+    <div class="md:col-span-2">
+      <!-- Image -->
+      <img src="https://t3.ftcdn.net/jpg/06/07/69/94/360_F_607699421_QZg4VyIvDKGmH8ULW7Omcf0ZgbQvyGuO.jpg" alt="Workout"
+        class="w-full h-100 object-cover mb-6">
+
+      <!-- Paragraph 1 -->
+      <!-- <p class="text-justify text-gray-600 mb-4">
+  When performing the shoulder press in the gym, it’s important to focus on proper form to protect your joints and maximize muscle engagement. Stand with your feet shoulder-width apart, keep your knees slightly bent, and brace your core to avoid arching your lower back. Hold the barbell or dumbbells just outside shoulder width, with your elbows slightly forward rather than flared out, and press the weight upward in a controlled motion until your arms are fully extended above your head. Lower the weight slowly back to chin level, maintaining control throughout the movement. Choose a weight that allows you to complete 8–12 reps with good technique, and increase it gradually as you get stronger. Avoid rushing the movement, locking your wrists back, or leaning excessively to push the weight, as these can lead to injury. For balanced shoulder development, combine the shoulder press with other exercises like lateral raises and rear delt work, ensuring you train with good form and give your muscles adequate rest between sessions. -->
+
+      <!-- Paragraph 2 -->
+      <p class="text-justify text-gray-600 mb-4">
+        A well-structured <span class="text-orange-600 ">Daily Workouts</span> daily workout in the gym should focus on
+        training different muscle groups and improving both strength and endurance. You might start with a warm-up
+        session, such as 5–10 minutes of light cardio or dynamic stretching, to prepare your muscles and joints. For
+        upper body strength, include exercises like shoulder presses, bench presses, hammer curls, and lat pulldowns,
+        ensuring you use proper form to prevent injury. On lower body days, work on squats, lunges, leg presses, and
+        deadlifts to build leg power and stability. Incorporate core exercises such as planks, Russian twists, or
+        hanging leg raises to improve stability and posture. Adding battle ropes, sled pushes, or high-intensity
+        interval training (HIIT) can help boost cardiovascular fitness. Finally, always end your workout with static
+        stretches or foam rolling to aid muscle recovery and flexibility. Keep track of your progress, gradually
+        increase weights or intensity, and give each muscle group enough rest before working it again.
+      </p>
+
+      <!-- Schedule -->
+      <div class="mt-8">
+        <h2 class="text-2xl font-bold mb-4">Schedule</h2>
+        <div class="space-y-3">
+
+          <!-- Row 1 -->
+          <div class="flex flex-col md:flex-row md:justify-between md:items-center border-b border-gray-200 pb-2">
+            <div class="flex items-center text-gray-700">
+              <span class="text-red-500 mr-2">⏰</span>
+              Class time : Monday, 5:00pm - 6:30pm
+            </div>
+            <div class="flex items-center text-gray-700 mt-1 md:mt-0">
+              <span class="font-semibold">Trainer :</span>
+              <span class="text-red-500 ml-2">Selina Stuart</span>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+            <div class="flex items-center text-gray-700">
+              <span class="text-red-500 mr-2">⏰</span>
+              Class time : Wednesday,Friday- 6:30pm - 8:00pm
+            </div>
+            <div class="flex items-center text-gray-700 mt-1 md:mt-0">
+              <span class="font-semibold">Trainer :</span>
+              <span class="text-red-500 ml-2">Jenifer Alex</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="space-y-8">
+
+      <!-- Search -->
+      <div>
+        <h2 class="text-xl font-bold mb-2 border-b-2 border-red-500 inline-block">Search</h2>
+        <div class="flex mt-2">
+          <input type="text" placeholder="Search here ..."
+            class="w-full border border-gray-300 rounded-l px-3 py-2 focus:outline-none">
+          <button class="bg-orange-500 text-white px-4 rounded-r">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <div>
+        <h2 class="text-xl font-bold mb-2 border-b-2 border-red-500 inline-block">Categories</h2>
+        <ul class="mt-2 space-y-1">
+          <li class="text-gray-600">Fitness</li>
+          <li class="text-gray-600">Gym</li>
+        </ul>
+      </div>
+
+      <!-- Archives -->
+      <div>
+        <h2 class="text-xl font-bold mb-2 border-b-2 border-red-500 inline-block">Archives</h2>
+        <ul class="mt-2 space-y-1">
+          <li class="text-gray-600">June 2017</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- footer -->
+  <footer class="bg-gray-900 text-white mt-20 py-12">
+    <div class="container mx-auto px-6 grid md:grid-cols-4 gap-10 ">
+      <div>
+        <h3 class="font-bold text-2xl mb-2">About Company</h3>
+        <p class="text-gray-400 text-lg">Achieve your fitness goals with our state-of-the-art gym facilities. From
+          cardio machines to free weights, we provide the perfect environment for strength, endurance, and total body
+          transformation.</p>
+        <div class="flex space-x-2 mt-4">
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+        </div>
+      </div>
+      <div class="ml-20">
+        <h3 class="font-bold mb-2 text-2xl">Follow Us on Twitter</h3>
+        <p class="text-orange-500 text-lg ">Tweets by @GymEdge</p>
+      </div>
+      <div>
+        <!-- <h3 class="font-bold mb-2 text-2xl">Flickr Photos</h3> -->
+        <div class="grid grid-cols-3 gap-2 ml-10">
+          <!-- <img src="https://live.staticflickr.com/65535/49971120798_969fd05cb8_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971636826_902d3d19b5_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971121318_284e730dea_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971636906_9c1bc91e4a_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971121403_1cb43aa23b_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971899867_945a724c1e_t.jpg" alt="photo"> -->
+          <a href="./index.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Home</a>
+          <a href="./about.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">About</a>
+          <a href="./classes.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Classes</a>
+          <a href="./trainer.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Trainers</a>
+          <a href="./schedule.html"
+            class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Schedule</a>
+
+          <a href="./blog.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Blog</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-gray-400 text-lg">44 New Design Street, rne 005</p>
+        <p class="text-gray-400 text-lg"><i class="fa-solid fa-phone-flip text-orange-500"></i> 01800433633</p>
+        <p class="text-gray-400 text-lg"><i class="fa-solid fa-envelope text-orange-500"></i> info@gymedge.com</p>
+        <p class="text-gray-400 text-lg "><i class="fa-regular fa-mobile text-orange-500"></i> (123) 118 9999</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Copyright  -->
+  <div class="p-6 bg-black">
+    <div class=" text-white flex justify-center">
+      <p>
+        © Copyright GymEdge 2016. All Right Reserved.
+        Designed and Developed by
+        <span class="text-orange-500">GymEdge</span>
+      </p>
+
+    </div>
+    <div>
+      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        class="fixed bottom-4 right-4 p-2 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white rounded-sm transition-colors duration-300">
+        <!-- Up Arrow Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+      </button>
+    </div>
+</body>
+
+</html>

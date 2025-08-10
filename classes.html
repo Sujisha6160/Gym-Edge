@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>classes</title>
+  <link rel="shortcut icon" href="./media/img.png" type="image/x-icon">
+
+  <!-- tailwind -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+
+      font-family: "Montserrat", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+  <!-- header -->
+  <header class="bg-white backdrop-blur-sm fixed top-0 left-0 w-full z-50 text-black ">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-4">
+
+      <!-- Logo -->
+      <div class="font-bold leading-tight">
+        <span class="text-black text-4xl"><span class="text-orange-600 text-4xl">G</span>YM</span><span
+          class="text-4xl text-black"> EDGE</span><br />
+        <span class="text-md text-gray-400 ml-8">FITNESS CENTER</span>
+      </div>
+
+      <!-- Hamburger Menu Button -->
+      <input type="checkbox" id="menu-toggle" class="hidden peer" />
+      <label for="menu-toggle" class="block md:hidden cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </label>
+      <!-- Nav Links -->
+      <nav class="w-full md:w-auto mt-4 md:mt-0 hidden peer-checked:block md:block">
+        <ul class="flex flex-col md:flex-row gap-4 md:gap-10 font-medium text-md items-center">
+          <li class="hover:text-orange-500 text-black"><a href="./index.html">HOME</a></li>
+          <li class="hover:text-orange-500 text-black"><a href="./about.html">ABOUT</a></li>
+          <li class="hover:text-orange-500 text-black"><a href="./classes.html">CLASSES</a></li>
+          <li class="hover:text-orange-500 text-black"><a href="./trainer.html">TRAINERS</a></li>
+          <li class="hover:text-orange-500 text-black"><a href="./schedule.html">SCHEDULE</a></li>
+
+          <li class="hover:text-orange-500 text-black"><a href="./blog.html">BLOG</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- hero section -->
+  <section class="relative h-100 flex items-center justify-center bg-black text-white">
+    <img src="https://img.goodfon.com/original/1920x1168/7/26/shtanga-trenazhernyy-zal-gym.jpg" alt=""
+      class="absolute inset-0 w-full h-full object-cover opacity-40">
+    <h1 class="relative text-5xl font-bold">All Classes</h1>
+  </section>
+  <!-- buttons -->
+  <div class="flex justify-center ">
+    <div class="-translate-y-1/2 bg-orange-500 text-white py-4 px-7 rounded-full text-sm font-medium shadow-lg">
+      <a href="./index.html"><span class="hover:text-black"> Home</span></a> / <a href="./classes.html"><span
+          class="hover:text-black">classes</span></a>
+    </div>
+  </div>
+
+  <!-- grid section -->
+  <!-- <div class="max-w-6xl mx-auto py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div class="relative w-64 h-80 overflow-hidden group rounded-lg shadow-lg"> -->
+  <!-- image -->
+  <!-- <img src="https://radiustheme.com/demo/wordpress/gymedge/wp-content/uploads/2016/12/class_05-360x300.jpg" alt=""
+        class="w-full h-full object-cover transition duration-500 group-hover:brightness-50"> -->
+  <!-- time session box -->
+  <!-- <div
+        class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+        <div class="flex items-center mb-2">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">FRI</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">3.00</span>
+        </div>
+        <div class="flex items-center mb-2">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">SAT</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">2.00</span>
+        </div>
+        
+      </div> -->
+  <!-- title -->
+  <!-- <div class="text-center py-3 bg-orange-500 text-white font-semibold">Cycling</div>
+    </div>  -->
+
+
+  <div class="max-w-6xl mx-auto py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+    <!-- Card 1-->
+    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+      <!-- Image -->
+      <img src="https://radiustheme.com/demo/wordpress/gymedge/wp-content/uploads/2016/12/class_05-360x300.jpg"
+        class="w-full h-64 object-cover transition duration-500 group-hover:brightness-50">
+
+      <!-- Timings -->
+      <div
+        class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+        <div class="flex items-center mb-2">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">FRI</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">3.00PM</span>
+        </div>
+        <div class="flex items-center">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">SAT</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">2.00PM</span>
+        </div>
+      </div>
+
+      <!-- Category Label -->
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 mb-3">
+        <a href="./shoulderPress.html"> <span
+            class="bg-orange-500 text-white font-semibold px-8 py-2 rounded-full">ShoulderPress</span></a>
+      </div>
+    </div>
+
+    <!--  Card 2-->
+    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+      <img src="https://radiustheme.com/demo/wordpress/gymedge/wp-content/uploads/2016/12/class_04-360x300.jpg"
+        class="w-full h-64 object-cover transition duration-500 group-hover:brightness-50">
+      <div
+        class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+        <div class="flex items-center mb-2">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">MON</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">5.00PM</span>
+        </div>
+        <div class="flex items-center">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">WED</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">6.30PM</span>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 mb-3">
+        <a href="./hammerCurl.html">
+          <span class="bg-orange-500 text-white font-semibold px-8 py-2 rounded-full">
+            Hammer Curl</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Card3 -->
+    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+      <img
+        src="https://cdn.prod.website-files.com/66c501d753ae2a8c705375b6/67f015f49341927eeca662f0_67e301fcab24c92d48cb372e_AF-HERO_BenchPress%2520(1).jpeg "
+        class="w-full h-64 object-cover transition duration-500 group-hover:brightness-50">
+      <div
+        class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+        <div class="flex items-center mb-2">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">MON</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">5.00PM</span>
+        </div>
+        <div class="flex items-center mb-2">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">WED</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">6.30PM</span>
+        </div>
+        <div class="flex items-center ">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">FRI</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">6.30PM</span>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 mb-3">
+        <a href="./benchPress.html"> <span
+            class="bg-orange-500 text-white font-semibold px-8 py-2 rounded-full">BenchPress</span></a>
+      </div>
+    </div>
+    <!-- card4 -->
+    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+      <img src="https://radiustheme.com/demo/wordpress/gymedge/wp-content/uploads/2016/12/class_02-360x300.jpg"
+        class="w-full h-64 object-cover transition duration-500 group-hover:brightness-50">
+      <div
+        class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+        <div class="flex items-center mb-2">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">MON</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">5.00PM</span>
+        </div>
+        <div class="flex items-center mb-2">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">WED</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">6.30PM</span>
+        </div>
+        <div class="flex items-center ">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">FRI</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">6.30PM</span>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 mb-3">
+        <a href="./legDeadlift.html"><span
+            class="bg-orange-500 text-white font-semibold px-8 py-2 rounded-full">LegDeadlift</span></a>
+      </div>
+    </div>
+    <!-- card5 -->
+    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+      <img src="https://radiustheme.com/demo/wordpress/gymedge/wp-content/uploads/2016/12/class_01-360x300.jpg"
+        class="w-full h-64 object-cover transition duration-500 group-hover:brightness-50">
+      <div
+        class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+        <div class="flex items-center mb-2">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">MON</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">5.00PM</span>
+        </div>
+        <div class="flex items-center mb-2">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">WED</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">6.30PM</span>
+        </div>
+        <div class="flex items-center ">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">FRI</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">6.30PM</span>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 mb-3">
+        <a href="./dumbellDeadlift.html"> <span
+            class="bg-orange-500 text-white font-semibold px-8 py-2 rounded-full">DumbbellDeadlift</span></a>
+      </div>
+    </div>
+    <!-- card6 -->
+    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfk9oeqB-OpLZtWb9Q_hQgDZWj9Eugg-g38w&s"
+        class="w-full h-64 object-cover transition duration-500 group-hover:brightness-50">
+      <div
+        class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+        <div class="flex items-center mb-2">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">MON</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">5.00PM</span>
+        </div>
+        <div class="flex items-center mb-2">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">WED</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">6.30PM</span>
+        </div>
+        <div class="flex items-center ">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">FRI</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">6.30PM</span>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 mb-3">
+        <a href="./BattleRopes.html"> <span class="bg-orange-500 text-white font-semibold px-8 py-2 rounded-full">
+            Battle Ropes</span></a>
+      </div>
+    </div>
+    <!-- card7 -->
+    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+      <img
+        src="https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/fit_woman_doing_a_dumbbell_lunge_in_the_gym.jpg?itok=G3wyY5Is"
+        class="w-full h-64 object-cover transition duration-500 group-hover:brightness-50">
+      <div
+        class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+        <div class="flex items-center mb-2">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">MON</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">5.00PM</span>
+        </div>
+        <div class="flex items-center mb-2">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">WED</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">6.30PM</span>
+        </div>
+        <div class="flex items-center ">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">FRI</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">6.30PM</span>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 mb-3">
+        <a href="./muscleStretch.html"> <span
+            class="bg-orange-500 text-white font-semibold px-8 py-2 rounded-full">MuscleStretch</span></a>
+      </div>
+    </div>
+    <!-- card8 -->
+    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+      <img src="https://t3.ftcdn.net/jpg/06/07/69/94/360_F_607699421_QZg4VyIvDKGmH8ULW7Omcf0ZgbQvyGuO.jpg"
+        class="w-full h-64 object-cover transition duration-500 group-hover:brightness-50">
+      <div
+        class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+        <div class="flex items-center mb-2">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">MON-SAT</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">5.00PM</span>
+        </div>
+        <!-- <div class="flex items-center mb-2">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">WED</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">6.30PM</span>
+        </div>
+          <div class="flex items-center ">
+          <span class="bg-orange-500 text-white font-bold px-3 py-1 text-sm">FRI</span>
+          <span class="bg-white text-black px-3 py-1 text-sm">6.30PM</span>
+        </div> -->
+      </div>
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 mb-3">
+        <a href="./dailyWorkouts.html"><span
+            class="bg-orange-500 text-white font-semibold px-8 py-2 rounded-full">DailyWorkouts</span></a>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- footer -->
+  <footer class="bg-gray-900 text-white mt-20 py-12">
+    <div class="container mx-auto px-6 grid md:grid-cols-4 gap-10 ">
+      <div>
+        <h3 class="font-bold text-2xl mb-2">About Company</h3>
+        <p class="text-gray-400 text-lg">Achieve your fitness goals with our state-of-the-art gym facilities. From
+          cardio machines to free weights, we provide the perfect environment for strength, endurance, and total body
+          transformation.</p>
+        <div class="flex space-x-2 mt-4">
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+          <span class="w-4 h-4 bg-orange-500 rounded-full"></span>
+        </div>
+      </div>
+      <div class="ml-20">
+        <h3 class="font-bold mb-2 text-2xl">Follow Us on Twitter</h3>
+        <p class="text-orange-500 text-lg ">Tweets by @GymEdge</p>
+      </div>
+      <div>
+        <!-- <h3 class="font-bold mb-2 text-2xl">Flickr Photos</h3> -->
+        <div class="grid grid-cols-3 gap-2 ml-10">
+          <!-- <img src="https://live.staticflickr.com/65535/49971120798_969fd05cb8_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971636826_902d3d19b5_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971121318_284e730dea_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971636906_9c1bc91e4a_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971121403_1cb43aa23b_t.jpg" alt="photo">
+          <img src="https://live.staticflickr.com/65535/49971899867_945a724c1e_t.jpg" alt="photo"> -->
+          <a href="./index.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Home</a>
+          <a href="./about.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">About</a>
+          <a href="./classes.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Classes</a>
+          <a href="./trainer.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Trainers</a>
+          <a href="./schedule.html"
+            class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Schedule</a>
+
+          <a href="./blog.html" class="text-gray-400 underline underline-offset-4 hover:text-orange-500">Blog</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-gray-400 text-lg">44 New Design Street, rne 005</p>
+        <p class="text-gray-400 text-lg"><i class="fa-solid fa-phone-flip text-orange-500"></i> 01800433633</p>
+        <p class="text-gray-400 text-lg"><i class="fa-solid fa-envelope text-orange-500"></i> info@gymedge.com</p>
+        <p class="text-gray-400 text-lg "><i class="fa-regular fa-mobile text-orange-500"></i> (123) 118 9999</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Copyright  -->
+  <div class="p-6 bg-black">
+    <div class=" text-white flex justify-center">
+      <p>
+        © Copyright GymEdge 2016. All Right Reserved.
+        Designed and Developed by
+        <span class="text-orange-500">GymEdge</span>
+      </p>
+
+    </div>
+    <div>
+      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        class="fixed bottom-4 right-4 p-2 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white rounded-sm transition-colors duration-300">
+        <!-- Up Arrow Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+      </button>
+    </div>
+
+</body>
+
+</html>
